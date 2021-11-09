@@ -13,7 +13,7 @@
 
 示例代码github：[https://github.com/cm4j/cm4j-all](https://github.com/cm4j/cm4j-all)
 
-<font color=red>注意：本项目的agent热更方式需依赖于 cm4j-javaagent 的jar包<br />
+> <font color=red>注意：本项目的agent热更方式需依赖于 cm4j-javaagent 的jar包<br />
 因此请先下载 [cm4j-javaagent](https://github.com/cm4j/cm4j-javaagent) 项目并执行 mvn clean install 命令，把cm4j-javaagent打个jar包安装到本地maven仓库中</font>
 
 系列介绍目录：[Java线上解决方案系列目录](http://yeas.fun/archives/solution-contents)
