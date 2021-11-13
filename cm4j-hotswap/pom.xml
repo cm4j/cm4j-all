@@ -59,9 +59,6 @@
     <dependency>
       <groupId>jdk.tools</groupId>
       <artifactId>jdk.tools</artifactId>
-      <version>${jdk.tools.version}</version>
-      <scope>system</scope>
-      <systemPath>${env.JAVA_HOME}/lib/tools.jar</systemPath>
     </dependency>
 
     <dependency>
