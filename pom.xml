@@ -105,6 +105,19 @@
         <version>3.21.0-GA</version>
       </dependency>
 
+      <!-- json -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.75</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm</artifactId>
+        <version>7.0</version>
+      </dependency>
+
       <!--test-->
       <dependency>
         <groupId>junit</groupId>

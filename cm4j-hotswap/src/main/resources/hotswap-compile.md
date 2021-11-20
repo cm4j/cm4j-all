@@ -1,6 +1,6 @@
 # 系列介绍目录：
 
-[Java线上解决方案系列目录](http://yeas.fun/archives/solution-contents)
+[Java线上解决方案系列目录](//yeas.fun/archives/solution-contents)
 
 # 正文
 

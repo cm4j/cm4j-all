@@ -1,5 +1,6 @@
-> 注意：本项目的agent热更方式需依赖于 cm4j-javaagent 的jar包<br />
-因此请先下载 [cm4j-javaagent](https://github.com/cm4j/cm4j-javaagent) 项目并执行 mvn clean install 命令，把cm4j-javaagent打个jar包安装到本地maven仓库中
+> <font color=red>示例代码github：[https://github.com/cm4j/cm4j-all](https://github.com/cm4j/cm4j-all) <br />
+注意：本项目的agent热更方式需依赖于 cm4j-javaagent 的jar包<br />
+因此请先下载 [cm4j-javaagent](https://github.com/cm4j/cm4j-javaagent) 项目并执行 mvn clean install 命令，把cm4j-javaagent打个jar包安装到本地maven仓库中</font>
 
 从事游戏行业多年，一直使用Java做开发，不可避免的就经历了许多，其中也踩过不少坑。
 
@@ -14,13 +15,13 @@
 这中间过程走了不少弯路，因此我这里整理了一个系列文章，主要讲解下这么多年遇到的问题、使用到的线上解决方案，以及其背后的原理。
 主要涉及到的技术点包括：Agent、JavaCompiler代码编译、字节码生成、ClassLoader原理、框架的代码隔离与互调思路等等
 
-系列介绍目录：[Java线上解决方案系列目录](http://yeas.fun/archives/solution-contents)
+系列介绍目录：[Java线上解决方案系列目录](//yeas.fun/archives/solution-contents)
 
 - [JAVA热更新1：Agent方式热更](//yeas.fun/archives/hotswap-agent)
 - [JAVA热更新2：动态加载子类热更](//yeas.fun/archives/java-hotswap-compile)
-- 线上动态代码执行
-- 在线Debug
-- 跨服本服调用一致化
+- [线上动态代码执行](//yeas.fun/archives/java-eval)
+- 在线调试Debug
+- 跨进程的调用一致化
 - Arthas原理：理解ClassLoader
 - Arthas原理：arthas如何做到与应用代码隔离？
 - Arthas原理：应用与arthas如何进行代码互调？
