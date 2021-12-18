@@ -25,3 +25,6 @@
 - Arthas原理：理解ClassLoader
 - Arthas原理：arthas如何做到与应用代码隔离？
 - Arthas原理：应用与arthas如何进行代码互调？
+
+多线程系列目录：
+- [替换synchronized锁解决死锁](https://yeas.fun/archives/deadlock-solution)
