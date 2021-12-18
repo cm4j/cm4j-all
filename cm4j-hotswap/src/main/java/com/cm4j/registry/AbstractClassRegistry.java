@@ -5,7 +5,7 @@ import com.cm4j.registry.registered.IRegistered;
 /**
  * 注册容器：类型为对象的class，值为对象本身
  *
- * @author yanghao
+ * @author yeas.fun
  * @since 2021/1/7
  */
 public abstract class AbstractClassRegistry<K, V extends IRegistered> extends AbstractRegistry<K, V> {

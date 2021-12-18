@@ -11,7 +11,7 @@ import com.google.common.collect.Sets;
 /**
  * 所有的注册容器管理类
  *
- * @author yanghao
+ * @author yeas.fun
  * @since 2021/1/9
  */
 public class RegistryManager {

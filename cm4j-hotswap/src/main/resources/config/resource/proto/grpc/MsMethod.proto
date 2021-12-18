@@ -1,0 +1,32 @@
+syntax = "proto2";
+
+option java_package = "com.cm4j.grpc.proto";
+option java_outer_classname = "MS_METHOD_GRPC";
+
+service MsMethodService {//跨服调用方法
+
+  // 调用方法
+  rpc invoker(MS_METHOD_REQ) returns (MS_METHOD_RESP);
+
+}
+
+message MS_METHOD_REQ {
+  optional int64 seqId = 1; // 协议唯一ID
+  required string className = 2;// class名字
+  required string methodName = 3;// 方法名
+  repeated bytes params = 4; // 参数信息
+}
+
+message MS_METHOD_RESP {
+  optional int64 seqId = 1; // 协议唯一ID
+  optional bytes reback = 2; // 返回信息
+  optional int32 errorCode = 3; // 错误码异常
+}
+
+message PRIMITIVE_PARAM {
+  optional bool paramBool = 1; // bool值
+  optional int32 paramNumber = 2; // 整型
+  optional int64 paramLong = 3; // 长整型
+  optional double paramDouble = 4; // 小数
+  optional string paramString = 5; // 字符串
+}

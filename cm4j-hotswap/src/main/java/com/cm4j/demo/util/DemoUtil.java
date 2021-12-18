@@ -3,7 +3,7 @@ package com.cm4j.demo.util;
 import com.cm4j.demo.UtilRegistry;
 
 /**
- * @author yanghao
+ * @author yeas.fun
  * @since 2021/11/4
  */
 public class DemoUtil implements IUtil {

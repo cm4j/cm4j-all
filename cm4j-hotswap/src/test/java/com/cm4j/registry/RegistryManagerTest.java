@@ -12,7 +12,7 @@ import com.cm4j.demo.UtilRegistry;
 import com.cm4j.demo.util.DemoUtil;
 
 /**
- * @author yanghao
+ * @author yeas.fun
  * @since 2021/11/8
  */
 public class RegistryManagerTest {

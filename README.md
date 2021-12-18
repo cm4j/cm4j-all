@@ -21,7 +21,7 @@
 - [JAVA热更新2：动态加载子类热更](//yeas.fun/archives/java-hotswap-compile)
 - [线上动态代码执行](//yeas.fun/archives/java-eval)
 - 在线调试Debug
-- 跨进程的调用一致化
+- [像本服一样调用远程代码（跨进程远程方法直调）](https://yeas.fun/archives/remoting-invoke)
 - Arthas原理：理解ClassLoader
 - Arthas原理：arthas如何做到与应用代码隔离？
 - Arthas原理：应用与arthas如何进行代码互调？

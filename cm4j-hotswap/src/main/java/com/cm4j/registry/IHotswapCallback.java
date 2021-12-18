@@ -3,7 +3,7 @@ package com.cm4j.registry;
 /**
  * 热更后回调
  *
- * @author yanghao
+ * @author yeas.fun
  * @since 2021/3/17
  */
 public interface IHotswapCallback<K, V> {

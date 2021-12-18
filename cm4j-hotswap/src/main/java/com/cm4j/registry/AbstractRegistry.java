@@ -21,7 +21,7 @@ import com.google.common.collect.Maps;
 /**
  * 注册容器
  *
- * @author yanghao
+ * @author yeas.fun
  * @since 2021/1/7
  */
 public abstract class AbstractRegistry<K, V extends IRegistered> implements IHotswapCallback<K, V> {
