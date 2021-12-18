@@ -217,4 +217,4 @@ LockerTest：提供了几种多线程死锁的单元测试
 - 利用System.identityHashCode()可以唯一标识出对象
 - 增加lock缓存，key为对象唯一标识，value为自定义的锁对象
 
---- END ---
+### ---END---

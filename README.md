@@ -19,7 +19,7 @@
 
 - [JAVA热更新1：Agent方式热更](//yeas.fun/archives/hotswap-agent)
 - [JAVA热更新2：动态加载子类热更](//yeas.fun/archives/java-hotswap-compile)
-- [线上动态代码执行](//yeas.fun/archives/java-eval)
+- [JAVA线上执行代码（动态代码执行）](//yeas.fun/archives/java-eval)
 - 在线调试Debug
 - [像本服一样调用远程代码（跨进程远程方法直调）](https://yeas.fun/archives/remoting-invoke)
 - Arthas原理：理解ClassLoader

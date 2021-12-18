@@ -1,8 +1,10 @@
-# 系列介绍目录：
+# JAVA线上执行代码（动态代码执行）
+
+## 系列介绍目录：
 
 [Java线上解决方案系列目录](//yeas.fun/archives/solution-contents)
 
-# 背景
+## 背景
 
 尽管我们有了[JAVA热更新1：Agent方式热更](//yeas.fun/archives/hotswap-agent)、[JAVA热更新2：动态加载子类热更](//yeas.fun/archives/java-hotswap-compile)，能修复大部分线上的BUG，在项目上线之后，不可避免的会遇到出数据错乱的情况。之前的做法可能是提前写好一段代码，然后通过后台接口来进行调用，用以解决线上数据规整。但这种方式必须得提前写好规整逻辑，但不能覆盖所有情况。
 因此我们就期望直接在线上执行一段代码，来进行我们业务数据的规整。
@@ -20,7 +22,7 @@ public class ChangeInfoTest {
 }
 ```
 
-# 设计思路
+## 设计思路
 
 如果要实现上述功能，本质上也就是我们期望写一段代码然后后在应用上执行。其实JDK的底层本身就提供了动态加载类文件的能力，它就是JavaCompiler。
 
@@ -30,7 +32,7 @@ public class ChangeInfoTest {
 - 利用ClassLoader将class字节流加载进入JVM，得到对应的class
 - 基于class则可以反射调用对应的逻辑
 
-## JavaCompiler的标准工作流程
+### JavaCompiler的标准工作流程
 
 如果代码片段格式正确，我们就通过Java编译器动态编译源代码得到了class。
 
@@ -71,7 +73,7 @@ public class JavaCompilerUsage {
 }
 ```
 
-## 线上如何执行代码？
+### 线上如何执行代码？
 
 得到class之后，我们想要调用class的方法，最直接的就是反射调用，相对就比较简单了，下面就是一段示例代码，直接调用类中第一个 public static 方法
 
@@ -97,24 +99,24 @@ public class ClassCaller {
 }
 ```
 
-# 问题：为什么我们写的类能调用到的目标jvm的代码?
+## 问题：为什么我们写的类能调用到的目标jvm的代码?
 
 上面我们看到 new DynamicClassLoader(cl)的时候传递了一个参数：cl，这是DynamicClassLoader的parent，也就是它的父ClassLoader。
 基于ClassLoader的双亲委派的原则，子ClassLoader是可以访问父ClassLoader里面的类的，所以我们写的代码是可以直接访问到线上的代码逻辑，而不会报类不存在。
 
 关于ClassLoader的实现细节，我们在讲Arthas的原理时会详细再讲解。
 
-# 示例代码github：
+## 示例代码github：
 
 [https://github.com/cm4j/cm4j-all](https://github.com/cm4j/cm4j-all)
 
-## 运行测试
+### 运行测试
 
 JavaEvalUtilTest.evalTest1()：直接运行java源码，运行即可计算1+2得到结果3
 
 JavaEvalUtilTest.evalTest2()：读取本地的一个类文件，并执行运行第一个public static 方法，结果与上一个方法同样
 
-# 总结
+## 总结
 
 我们想要线上动态执行代码来进行业务调整，需要经过以下步骤：
 
