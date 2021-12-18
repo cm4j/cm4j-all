@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import com.cm4j.util.ThreadUtil;
 
 /**
- * @author yanghao
+ * @author yeas.fun
  * @since 2021/11/25
  */
 public class InternalLock implements AutoCloseable {

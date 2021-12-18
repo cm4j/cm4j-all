@@ -1,72 +1,15 @@
 package com.cm4j.lock;
 
+import org.junit.Test;
+
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
 
-import org.junit.Test;
-
 /**
- * @author yanghao
+ * @author yeas.fun
  * @since 2021/11/29
  */
 public class LockerTest {
-
-    /**
-     * synchronized死锁
-     */
-    @Test
-    public void deadLock_Test() {
-        TTT o1 = new TTT();
-        TTT o2 = new TTT();
-
-        // 下面代码运行时会出现嵌套锁
-        Thread t1 = new Thread(() -> {
-            // 出现锁的情况：嵌套锁+锁的执行顺序不一样
-            synchronized (o1) {
-                LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(1));
-                synchronized (o2) {
-                    System.out.println(Thread.currentThread() + "111111>>> olai olai ooo...");
-
-                }
-            }
-        });
-
-
-        Thread t2 = new Thread(() -> {
-            synchronized (o2) {
-                LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(1));
-                synchronized (o1) {
-                    System.out.println(Thread.currentThread() + "111111>>> olai olai ooo...");
-                }
-            }
-        });
-        t1.start();
-        t2.start();
-
-        LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(3));
-        System.out.println("t1状态：" + t1.getState());
-        System.out.println("t2状态：" + t2.getState());
-    }
-
-    /**
-     * 基于名字使用锁
-     */
-    @Test
-    public void test1() {
-        new Thread(() -> {
-            try (InternalLock ignored = Locker.getLockNamed("xxxx")) {
-                System.out.println(Thread.currentThread() + ">>> olai olai ooo...");
-            }
-        }).start();
-
-        new Thread(() -> {
-            try (InternalLock ignored = Locker.getLockNamed("xxxx")) {
-                System.out.println(Thread.currentThread() + ">>> olai olai ooo...");
-            }
-        }).start();
-
-        LockSupport.park();
-    }
 
     /**
      * 基于对象使用锁

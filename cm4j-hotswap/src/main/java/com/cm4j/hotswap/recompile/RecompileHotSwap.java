@@ -33,7 +33,7 @@ import javassist.NotFoundException;
  * 2.方法内的final方法无法覆写，则无法热更，动态生成的子类会忽略final方法
  * </pre>
  *
- * @author yanghao
+ * @author yeas.fun
  * @since 2020/12/15
  */
 public class RecompileHotSwap {

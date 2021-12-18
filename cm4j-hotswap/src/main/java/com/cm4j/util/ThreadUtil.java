@@ -3,7 +3,7 @@ package com.cm4j.util;
 import com.google.common.base.Joiner;
 
 /**
- * @author yanghao
+ * @author yeas.fun
  * @since 2021/11/29
  */
 public class ThreadUtil {
