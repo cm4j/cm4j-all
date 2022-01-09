@@ -1,4 +1,4 @@
-# Maven的原理与技巧
+# Maven常见问题与原理技巧
 
 ## 背景
 
@@ -29,7 +29,7 @@ Maven有三套相互独立的生命周期，分别是clean、default和site。�
 
 各个生命周期相互独立，但一个生命周期的阶段前后依赖。
 
-![Maven生命周期](maven-mechanism1.png)
+![Maven生命周期](https://oss.yeas.fun/halo-yeas/maven-mechanism1_1641727766875.png)
 
 **例子：**
 
@@ -63,12 +63,11 @@ Maven中有一个特性profile，主要是可以根据不同环境激活不同�
 
 指定profile激活：mvn clean -P nw
 
-![Maven的profile](maven-mechanism2.png)
+![Maven的profile](https://oss.yeas.fun/halo-yeas/maven-mechanism2_1641727767641.png)
 
 下面是几种激活的条件：
 
 ```xml
-
 <activation>
     <activeByDefault>true</activeByDefault>
     <jdk>!1.8</jdk>
@@ -85,7 +84,7 @@ Maven中有一个特性profile，主要是可以根据不同环境激活不同�
 
 Maven中属性都是从哪里来的？是哪里定义的？这里直接列了一个脑图给大家参考
 
-![Maven属性来源](maven-mechanism3.png)
+![Maven属性来源](https://oss.yeas.fun/halo-yeas/maven-mechanism3_1641727767109.png)
 
 ### 3. 配置的优先级
 
@@ -108,15 +107,15 @@ jar包存储相关的概念
 - 本地仓库（推荐配置到settings.xml中）
 - 远程仓库
 
-![Maven远程仓库](maven-mechanism4.png)
+![Maven远程仓库](https://oss.yeas.fun/halo-yeas/maven-mechanism4_1641727766609.png)
 
 - 仓库镜像：mirror（可在settings.xml中配置）
 
-![Maven仓库镜像](maven-mechanism5.png)
+![Maven仓库镜像](https://oss.yeas.fun/halo-yeas/maven-mechanism5_1641727767720.png)
 
 下载Jar包流程图
 
-![Maven下载jar包流程](maven-mechanism6.png)
+![Maven下载jar包流程](https://oss.yeas.fun/halo-yeas/maven-mechanism6_1641727767234.png)
 
 ### 5.jar包下载不到或不对
 
@@ -128,7 +127,7 @@ jar包存储相关的概念
 
 - 删掉下载不了的jar，执行 mvn compile 重试
 - 检查仓库的地址和镜像的地址
-- 对于第3点，用脚本删除 .lastUpdated 文件。脚本下载：![cleanLastUpdated.bat](cleanLastUpdated.bat)
+- 对于第3点，用脚本删除 .lastUpdated 文件。脚本下载：[cleanLastUpdated.bat](https://oss.yeas.fun/halo-yeas/cleanLastUpdated_1641728476687.bat)
 - IDEA显示红色但实际能运行：清除缓存重启 File/Invalidate Caches。
 
 ### 6.jar包冲突
