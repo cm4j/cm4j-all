@@ -19,12 +19,12 @@
 
 - [JAVA热更新1：Agent方式热更](//yeas.fun/archives/hotswap-agent)
 - [JAVA热更新2：动态加载子类热更](//yeas.fun/archives/java-hotswap-compile)
-- [JAVA不停服执行代码（动态代码执行）](//yeas.fun/archives/java-eval)
-- [像本服一样调用远程代码（跨进程远程方法直调）](//yeas.fun/archives/remoting-invoke)
+- [JAVA线上执行代码（动态代码执行）](//yeas.fun/archives/java-eval)
 - 在线调试Debug
-- Arthas原理：理解ClassLoader
+- [像本服一样调用远程代码（跨进程远程方法直调）](https://yeas.fun/archives/remoting-invoke)
+- [Arthas原理：理解ClassLoader](https://yeas.fun/archives/arthas-classloader)
 - Arthas原理：arthas如何做到与应用代码隔离？
 - Arthas原理：应用与arthas如何进行代码互调？
 
 多线程系列目录：
-- [替换synchronized锁解决死锁](//yeas.fun/archives/deadlock-solution)
+- [替换synchronized锁解决死锁](https://yeas.fun/archives/deadlock-solution)
