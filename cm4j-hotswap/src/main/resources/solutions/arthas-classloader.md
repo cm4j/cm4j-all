@@ -4,6 +4,8 @@
 
 [Java线上解决方案系列目录](//yeas.fun/archives/solution-contents)
 
+或者可以直接下一篇：[Arthas原理：如何做到与应用代码隔离？](https://yeas.fun/archives/arthas-isolation)
+
 ## 背景
 
 阿里的arthas一经推出就大受好评，主要原因就是它提供了一套线上问题的解决方案，比如可以在线查看服务器状态；可以支持热更新，原理类似我们之前所讲的[JAVA热更新1：Agent方式热更](//yeas.fun/archives/hotswap-agent)
