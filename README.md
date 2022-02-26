@@ -24,7 +24,7 @@
 - [像本服一样调用远程代码（跨进程远程方法直调）](//yeas.fun/archives/remoting-invoke)
 - [Arthas原理：理解ClassLoader](//yeas.fun/archives/arthas-classloader)
 - [Arthas原理：arthas如何做到与应用代码隔离？](//yeas.fun/archives/arthas-isolation)
-- Arthas原理：应用与arthas如何进行代码互调？
+- [Arthas原理：Arthas的命令分类及原理](//yeas.fun/archives/arthas-command-category)
 
 多线程系列目录：
 - [替换synchronized锁解决死锁](https://yeas.fun/archives/deadlock-solution)
