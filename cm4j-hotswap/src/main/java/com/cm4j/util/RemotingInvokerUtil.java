@@ -51,7 +51,7 @@ public class RemotingInvokerUtil {
      * grpc传递null值标识
      * 如果不设值没法区分是MessageLite本身没有内容,还是传递的是null,所以设置一个特殊字符串表明null传递
      */
-    private static final MS_METHOD_GRPC.PRIMITIVE_PARAM NULL_PARAM = MS_METHOD_GRPC.PRIMITIVE_PARAM.newBuilder()
+    private static final PRIMITIVE_PARAM NULL_PARAM = PRIMITIVE_PARAM.newBuilder()
             .setParamString(NULL_PARAM_TRANSFER_FLAG)
             .build();
     private static final ByteString NULL_PARAM_BYTE_STRING = NULL_PARAM.toByteString();

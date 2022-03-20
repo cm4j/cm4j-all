@@ -28,3 +28,4 @@
 
 多线程系列目录：
 - [替换synchronized锁解决死锁](https://yeas.fun/archives/deadlock-solution)
+- [单线程执行解决复杂的并发场景](https://yeas.fun/archives/singleton-module)

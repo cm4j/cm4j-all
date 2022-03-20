@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * Description:远程方法调用
  *
  * @author zhanghaojie
- * @date 2021/8/27
+ * @since 2021/8/27
  */
 public class MsMethodServiceImpl extends MsMethodServiceGrpc.MsMethodServiceImplBase {
 
