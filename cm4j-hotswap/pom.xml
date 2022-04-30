@@ -107,6 +107,19 @@
       <artifactId>asm</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>com.esotericsoftware</groupId>
+      <artifactId>reflectasm</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.protostuff</groupId>
+      <artifactId>protostuff-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.protostuff</groupId>
+      <artifactId>protostuff-runtime</artifactId>
+    </dependency>
+
     <!--其他辅助类 -->
     <dependency>
       <groupId>cglib</groupId>

@@ -14,7 +14,7 @@ message MS_METHOD_REQ {
   optional int64 seqId = 1; // 协议唯一ID
   required string className = 2;// class名字
   required string methodName = 3;// 方法名
-  repeated bytes params = 4; // 参数信息
+  required bytes params = 4; // 参数信息
 }
 
 message MS_METHOD_RESP {

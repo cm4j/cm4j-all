@@ -45,7 +45,7 @@ public final class MS_METHOD_GRPC {
      * class名字
      * </pre>
      */
-    String getClassName();
+    java.lang.String getClassName();
     /**
      * <code>required string className = 2;</code>
      *
@@ -72,7 +72,7 @@ public final class MS_METHOD_GRPC {
      * 方法名
      * </pre>
      */
-    String getMethodName();
+    java.lang.String getMethodName();
     /**
      * <code>required string methodName = 3;</code>
      *
@@ -83,31 +83,23 @@ public final class MS_METHOD_GRPC {
     com.google.protobuf.ByteString
         getMethodNameBytes();
 
-    // repeated bytes params = 4;
+    // required bytes params = 4;
     /**
-     * <code>repeated bytes params = 4;</code>
+     * <code>required bytes params = 4;</code>
      *
      * <pre>
      * 参数信息
      * </pre>
      */
-    java.util.List<com.google.protobuf.ByteString> getParamsList();
+    boolean hasParams();
     /**
-     * <code>repeated bytes params = 4;</code>
+     * <code>required bytes params = 4;</code>
      *
      * <pre>
      * 参数信息
      * </pre>
      */
-    int getParamsCount();
-    /**
-     * <code>repeated bytes params = 4;</code>
-     *
-     * <pre>
-     * 参数信息
-     * </pre>
-     */
-    com.google.protobuf.ByteString getParams(int index);
+    com.google.protobuf.ByteString getParams();
   }
   /**
    * Protobuf type {@code MS_METHOD_REQ}
@@ -132,7 +124,7 @@ public final class MS_METHOD_GRPC {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -176,11 +168,8 @@ public final class MS_METHOD_GRPC {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                params_ = new java.util.ArrayList<com.google.protobuf.ByteString>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              params_.add(input.readBytes());
+              bitField0_ |= 0x00000008;
+              params_ = input.readBytes();
               break;
             }
           }
@@ -191,23 +180,20 @@ public final class MS_METHOD_GRPC {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          params_ = java.util.Collections.unmodifiableList(params_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_descriptor;
+      return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_fieldAccessorTable
+      return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MS_METHOD_REQ.class, Builder.class);
+              com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ.class, com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ.Builder.class);
     }
 
     public static com.google.protobuf.Parser<MS_METHOD_REQ> PARSER =
@@ -220,7 +206,7 @@ public final class MS_METHOD_GRPC {
       }
     };
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MS_METHOD_REQ> getParserForType() {
       return PARSER;
     }
@@ -252,7 +238,7 @@ public final class MS_METHOD_GRPC {
 
     // required string className = 2;
     public static final int CLASSNAME_FIELD_NUMBER = 2;
-    private Object className_;
+    private java.lang.Object className_;
     /**
      * <code>required string className = 2;</code>
      *
@@ -270,14 +256,14 @@ public final class MS_METHOD_GRPC {
      * class名字
      * </pre>
      */
-    public String getClassName() {
-      Object ref = className_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getClassName() {
+      java.lang.Object ref = className_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           className_ = s;
         }
@@ -293,11 +279,11 @@ public final class MS_METHOD_GRPC {
      */
     public com.google.protobuf.ByteString
         getClassNameBytes() {
-      Object ref = className_;
-      if (ref instanceof String) {
+      java.lang.Object ref = className_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         className_ = b;
         return b;
       } else {
@@ -307,7 +293,7 @@ public final class MS_METHOD_GRPC {
 
     // required string methodName = 3;
     public static final int METHODNAME_FIELD_NUMBER = 3;
-    private Object methodName_;
+    private java.lang.Object methodName_;
     /**
      * <code>required string methodName = 3;</code>
      *
@@ -325,14 +311,14 @@ public final class MS_METHOD_GRPC {
      * 方法名
      * </pre>
      */
-    public String getMethodName() {
-      Object ref = methodName_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getMethodName() {
+      java.lang.Object ref = methodName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           methodName_ = s;
         }
@@ -348,11 +334,11 @@ public final class MS_METHOD_GRPC {
      */
     public com.google.protobuf.ByteString
         getMethodNameBytes() {
-      Object ref = methodName_;
-      if (ref instanceof String) {
+      java.lang.Object ref = methodName_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         methodName_ = b;
         return b;
       } else {
@@ -360,46 +346,35 @@ public final class MS_METHOD_GRPC {
       }
     }
 
-    // repeated bytes params = 4;
+    // required bytes params = 4;
     public static final int PARAMS_FIELD_NUMBER = 4;
-    private java.util.List<com.google.protobuf.ByteString> params_;
+    private com.google.protobuf.ByteString params_;
     /**
-     * <code>repeated bytes params = 4;</code>
+     * <code>required bytes params = 4;</code>
      *
      * <pre>
      * 参数信息
      * </pre>
      */
-    public java.util.List<com.google.protobuf.ByteString>
-        getParamsList() {
+    public boolean hasParams() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required bytes params = 4;</code>
+     *
+     * <pre>
+     * 参数信息
+     * </pre>
+     */
+    public com.google.protobuf.ByteString getParams() {
       return params_;
-    }
-    /**
-     * <code>repeated bytes params = 4;</code>
-     *
-     * <pre>
-     * 参数信息
-     * </pre>
-     */
-    public int getParamsCount() {
-      return params_.size();
-    }
-    /**
-     * <code>repeated bytes params = 4;</code>
-     *
-     * <pre>
-     * 参数信息
-     * </pre>
-     */
-    public com.google.protobuf.ByteString getParams(int index) {
-      return params_.get(index);
     }
 
     private void initFields() {
       seqId_ = 0L;
       className_ = "";
       methodName_ = "";
-      params_ = java.util.Collections.emptyList();
+      params_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -411,6 +386,10 @@ public final class MS_METHOD_GRPC {
         return false;
       }
       if (!hasMethodName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasParams()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -430,8 +409,8 @@ public final class MS_METHOD_GRPC {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getMethodNameBytes());
       }
-      for (int i = 0; i < params_.size(); i++) {
-        output.writeBytes(4, params_.get(i));
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, params_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -454,14 +433,9 @@ public final class MS_METHOD_GRPC {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getMethodNameBytes());
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < params_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(params_.get(i));
-        }
-        size += dataSize;
-        size += 1 * getParamsList().size();
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, params_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -469,59 +443,59 @@ public final class MS_METHOD_GRPC {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static MS_METHOD_REQ parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MS_METHOD_REQ parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MS_METHOD_REQ parseFrom(byte[] data)
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MS_METHOD_REQ parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MS_METHOD_REQ parseFrom(java.io.InputStream input)
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MS_METHOD_REQ parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static MS_METHOD_REQ parseDelimitedFrom(java.io.InputStream input)
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static MS_METHOD_REQ parseDelimitedFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static MS_METHOD_REQ parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MS_METHOD_REQ parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -530,14 +504,14 @@ public final class MS_METHOD_GRPC {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(MS_METHOD_REQ prototype) {
+    public static Builder newBuilder(com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -546,17 +520,17 @@ public final class MS_METHOD_GRPC {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements MS_METHOD_REQOrBuilder {
+       implements com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_descriptor;
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_fieldAccessorTable
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MS_METHOD_REQ.class, Builder.class);
+                com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ.class, com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ.Builder.class);
       }
 
       // Construct using com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ.newBuilder()
@@ -565,7 +539,7 @@ public final class MS_METHOD_GRPC {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -585,7 +559,7 @@ public final class MS_METHOD_GRPC {
         bitField0_ = (bitField0_ & ~0x00000002);
         methodName_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        params_ = java.util.Collections.emptyList();
+        params_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
@@ -596,23 +570,23 @@ public final class MS_METHOD_GRPC {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_descriptor;
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_REQ_descriptor;
       }
 
-      public MS_METHOD_REQ getDefaultInstanceForType() {
-        return MS_METHOD_REQ.getDefaultInstance();
+      public com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ getDefaultInstanceForType() {
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ.getDefaultInstance();
       }
 
-      public MS_METHOD_REQ build() {
-        MS_METHOD_REQ result = buildPartial();
+      public com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ build() {
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public MS_METHOD_REQ buildPartial() {
-        MS_METHOD_REQ result = new MS_METHOD_REQ(this);
+      public com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ buildPartial() {
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ result = new com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -627,9 +601,8 @@ public final class MS_METHOD_GRPC {
           to_bitField0_ |= 0x00000004;
         }
         result.methodName_ = methodName_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          params_ = java.util.Collections.unmodifiableList(params_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
         }
         result.params_ = params_;
         result.bitField0_ = to_bitField0_;
@@ -638,16 +611,16 @@ public final class MS_METHOD_GRPC {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MS_METHOD_REQ) {
-          return mergeFrom((MS_METHOD_REQ)other);
+        if (other instanceof com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ) {
+          return mergeFrom((com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MS_METHOD_REQ other) {
-        if (other == MS_METHOD_REQ.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ other) {
+        if (other == com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ.getDefaultInstance()) return this;
         if (other.hasSeqId()) {
           setSeqId(other.getSeqId());
         }
@@ -661,15 +634,8 @@ public final class MS_METHOD_GRPC {
           methodName_ = other.methodName_;
           onChanged();
         }
-        if (!other.params_.isEmpty()) {
-          if (params_.isEmpty()) {
-            params_ = other.params_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureParamsIsMutable();
-            params_.addAll(other.params_);
-          }
-          onChanged();
+        if (other.hasParams()) {
+          setParams(other.getParams());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -684,6 +650,10 @@ public final class MS_METHOD_GRPC {
           
           return false;
         }
+        if (!hasParams()) {
+          
+          return false;
+        }
         return true;
       }
 
@@ -691,11 +661,11 @@ public final class MS_METHOD_GRPC {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MS_METHOD_REQ parsedMessage = null;
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MS_METHOD_REQ) e.getUnfinishedMessage();
+          parsedMessage = (com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -756,7 +726,7 @@ public final class MS_METHOD_GRPC {
       }
 
       // required string className = 2;
-      private Object className_ = "";
+      private java.lang.Object className_ = "";
       /**
        * <code>required string className = 2;</code>
        *
@@ -774,15 +744,15 @@ public final class MS_METHOD_GRPC {
        * class名字
        * </pre>
        */
-      public String getClassName() {
-        Object ref = className_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref)
+      public java.lang.String getClassName() {
+        java.lang.Object ref = className_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           className_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -794,11 +764,11 @@ public final class MS_METHOD_GRPC {
        */
       public com.google.protobuf.ByteString
           getClassNameBytes() {
-        Object ref = className_;
+        java.lang.Object ref = className_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           className_ = b;
           return b;
         } else {
@@ -813,7 +783,7 @@ public final class MS_METHOD_GRPC {
        * </pre>
        */
       public Builder setClassName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -854,7 +824,7 @@ public final class MS_METHOD_GRPC {
       }
 
       // required string methodName = 3;
-      private Object methodName_ = "";
+      private java.lang.Object methodName_ = "";
       /**
        * <code>required string methodName = 3;</code>
        *
@@ -872,15 +842,15 @@ public final class MS_METHOD_GRPC {
        * 方法名
        * </pre>
        */
-      public String getMethodName() {
-        Object ref = methodName_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref)
+      public java.lang.String getMethodName() {
+        java.lang.Object ref = methodName_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           methodName_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -892,11 +862,11 @@ public final class MS_METHOD_GRPC {
        */
       public com.google.protobuf.ByteString
           getMethodNameBytes() {
-        Object ref = methodName_;
+        java.lang.Object ref = methodName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           methodName_ = b;
           return b;
         } else {
@@ -911,7 +881,7 @@ public final class MS_METHOD_GRPC {
        * </pre>
        */
       public Builder setMethodName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -951,102 +921,54 @@ public final class MS_METHOD_GRPC {
         return this;
       }
 
-      // repeated bytes params = 4;
-      private java.util.List<com.google.protobuf.ByteString> params_ = java.util.Collections.emptyList();
-      private void ensureParamsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          params_ = new java.util.ArrayList<com.google.protobuf.ByteString>(params_);
-          bitField0_ |= 0x00000008;
-         }
-      }
+      // required bytes params = 4;
+      private com.google.protobuf.ByteString params_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>repeated bytes params = 4;</code>
+       * <code>required bytes params = 4;</code>
        *
        * <pre>
        * 参数信息
        * </pre>
        */
-      public java.util.List<com.google.protobuf.ByteString>
-          getParamsList() {
-        return java.util.Collections.unmodifiableList(params_);
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>repeated bytes params = 4;</code>
+       * <code>required bytes params = 4;</code>
        *
        * <pre>
        * 参数信息
        * </pre>
        */
-      public int getParamsCount() {
-        return params_.size();
+      public com.google.protobuf.ByteString getParams() {
+        return params_;
       }
       /**
-       * <code>repeated bytes params = 4;</code>
+       * <code>required bytes params = 4;</code>
        *
        * <pre>
        * 参数信息
        * </pre>
        */
-      public com.google.protobuf.ByteString getParams(int index) {
-        return params_.get(index);
-      }
-      /**
-       * <code>repeated bytes params = 4;</code>
-       *
-       * <pre>
-       * 参数信息
-       * </pre>
-       */
-      public Builder setParams(
-          int index, com.google.protobuf.ByteString value) {
+      public Builder setParams(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureParamsIsMutable();
-        params_.set(index, value);
+  bitField0_ |= 0x00000008;
+        params_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated bytes params = 4;</code>
-       *
-       * <pre>
-       * 参数信息
-       * </pre>
-       */
-      public Builder addParams(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureParamsIsMutable();
-        params_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated bytes params = 4;</code>
-       *
-       * <pre>
-       * 参数信息
-       * </pre>
-       */
-      public Builder addAllParams(
-          Iterable<? extends com.google.protobuf.ByteString> values) {
-        ensureParamsIsMutable();
-        super.addAll(values, params_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated bytes params = 4;</code>
+       * <code>required bytes params = 4;</code>
        *
        * <pre>
        * 参数信息
        * </pre>
        */
       public Builder clearParams() {
-        params_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
+        params_ = getDefaultInstance().getParams();
         onChanged();
         return this;
       }
@@ -1142,7 +1064,7 @@ public final class MS_METHOD_GRPC {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -1199,14 +1121,14 @@ public final class MS_METHOD_GRPC {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_descriptor;
+      return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_fieldAccessorTable
+      return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MS_METHOD_RESP.class, Builder.class);
+              com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP.class, com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP.Builder.class);
     }
 
     public static com.google.protobuf.Parser<MS_METHOD_RESP> PARSER =
@@ -1219,7 +1141,7 @@ public final class MS_METHOD_GRPC {
       }
     };
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MS_METHOD_RESP> getParserForType() {
       return PARSER;
     }
@@ -1350,59 +1272,59 @@ public final class MS_METHOD_GRPC {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static MS_METHOD_RESP parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MS_METHOD_RESP parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MS_METHOD_RESP parseFrom(byte[] data)
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MS_METHOD_RESP parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MS_METHOD_RESP parseFrom(java.io.InputStream input)
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MS_METHOD_RESP parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static MS_METHOD_RESP parseDelimitedFrom(java.io.InputStream input)
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static MS_METHOD_RESP parseDelimitedFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static MS_METHOD_RESP parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MS_METHOD_RESP parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1411,14 +1333,14 @@ public final class MS_METHOD_GRPC {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(MS_METHOD_RESP prototype) {
+    public static Builder newBuilder(com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1427,17 +1349,17 @@ public final class MS_METHOD_GRPC {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements MS_METHOD_RESPOrBuilder {
+       implements com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESPOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_descriptor;
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_fieldAccessorTable
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MS_METHOD_RESP.class, Builder.class);
+                com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP.class, com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP.Builder.class);
       }
 
       // Construct using com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP.newBuilder()
@@ -1446,7 +1368,7 @@ public final class MS_METHOD_GRPC {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1475,23 +1397,23 @@ public final class MS_METHOD_GRPC {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_descriptor;
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_MS_METHOD_RESP_descriptor;
       }
 
-      public MS_METHOD_RESP getDefaultInstanceForType() {
-        return MS_METHOD_RESP.getDefaultInstance();
+      public com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP getDefaultInstanceForType() {
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP.getDefaultInstance();
       }
 
-      public MS_METHOD_RESP build() {
-        MS_METHOD_RESP result = buildPartial();
+      public com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP build() {
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public MS_METHOD_RESP buildPartial() {
-        MS_METHOD_RESP result = new MS_METHOD_RESP(this);
+      public com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP buildPartial() {
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP result = new com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1512,16 +1434,16 @@ public final class MS_METHOD_GRPC {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MS_METHOD_RESP) {
-          return mergeFrom((MS_METHOD_RESP)other);
+        if (other instanceof com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP) {
+          return mergeFrom((com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MS_METHOD_RESP other) {
-        if (other == MS_METHOD_RESP.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP other) {
+        if (other == com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP.getDefaultInstance()) return this;
         if (other.hasSeqId()) {
           setSeqId(other.getSeqId());
         }
@@ -1543,11 +1465,11 @@ public final class MS_METHOD_GRPC {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MS_METHOD_RESP parsedMessage = null;
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MS_METHOD_RESP) e.getUnfinishedMessage();
+          parsedMessage = (com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1810,7 +1732,7 @@ public final class MS_METHOD_GRPC {
      * 字符串
      * </pre>
      */
-    String getParamString();
+    java.lang.String getParamString();
     /**
      * <code>optional string paramString = 5;</code>
      *
@@ -1844,7 +1766,7 @@ public final class MS_METHOD_GRPC {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -1911,14 +1833,14 @@ public final class MS_METHOD_GRPC {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_descriptor;
+      return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_fieldAccessorTable
+      return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              PRIMITIVE_PARAM.class, Builder.class);
+              com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM.class, com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM.Builder.class);
     }
 
     public static com.google.protobuf.Parser<PRIMITIVE_PARAM> PARSER =
@@ -1931,7 +1853,7 @@ public final class MS_METHOD_GRPC {
       }
     };
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<PRIMITIVE_PARAM> getParserForType() {
       return PARSER;
     }
@@ -2035,7 +1957,7 @@ public final class MS_METHOD_GRPC {
 
     // optional string paramString = 5;
     public static final int PARAMSTRING_FIELD_NUMBER = 5;
-    private Object paramString_;
+    private java.lang.Object paramString_;
     /**
      * <code>optional string paramString = 5;</code>
      *
@@ -2053,14 +1975,14 @@ public final class MS_METHOD_GRPC {
      * 字符串
      * </pre>
      */
-    public String getParamString() {
-      Object ref = paramString_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getParamString() {
+      java.lang.Object ref = paramString_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           paramString_ = s;
         }
@@ -2076,11 +1998,11 @@ public final class MS_METHOD_GRPC {
      */
     public com.google.protobuf.ByteString
         getParamStringBytes() {
-      Object ref = paramString_;
-      if (ref instanceof String) {
+      java.lang.Object ref = paramString_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         paramString_ = b;
         return b;
       } else {
@@ -2157,59 +2079,59 @@ public final class MS_METHOD_GRPC {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static PRIMITIVE_PARAM parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PRIMITIVE_PARAM parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PRIMITIVE_PARAM parseFrom(byte[] data)
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static PRIMITIVE_PARAM parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static PRIMITIVE_PARAM parseFrom(java.io.InputStream input)
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static PRIMITIVE_PARAM parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static PRIMITIVE_PARAM parseDelimitedFrom(java.io.InputStream input)
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static PRIMITIVE_PARAM parseDelimitedFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static PRIMITIVE_PARAM parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static PRIMITIVE_PARAM parseFrom(
+    public static com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2218,14 +2140,14 @@ public final class MS_METHOD_GRPC {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(PRIMITIVE_PARAM prototype) {
+    public static Builder newBuilder(com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2234,17 +2156,17 @@ public final class MS_METHOD_GRPC {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements PRIMITIVE_PARAMOrBuilder {
+       implements com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAMOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_descriptor;
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_fieldAccessorTable
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                PRIMITIVE_PARAM.class, Builder.class);
+                com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM.class, com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM.Builder.class);
       }
 
       // Construct using com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM.newBuilder()
@@ -2253,7 +2175,7 @@ public final class MS_METHOD_GRPC {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2286,23 +2208,23 @@ public final class MS_METHOD_GRPC {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_descriptor;
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.internal_static_PRIMITIVE_PARAM_descriptor;
       }
 
-      public PRIMITIVE_PARAM getDefaultInstanceForType() {
-        return PRIMITIVE_PARAM.getDefaultInstance();
+      public com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM getDefaultInstanceForType() {
+        return com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM.getDefaultInstance();
       }
 
-      public PRIMITIVE_PARAM build() {
-        PRIMITIVE_PARAM result = buildPartial();
+      public com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM build() {
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public PRIMITIVE_PARAM buildPartial() {
-        PRIMITIVE_PARAM result = new PRIMITIVE_PARAM(this);
+      public com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM buildPartial() {
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM result = new com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2331,16 +2253,16 @@ public final class MS_METHOD_GRPC {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof PRIMITIVE_PARAM) {
-          return mergeFrom((PRIMITIVE_PARAM)other);
+        if (other instanceof com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM) {
+          return mergeFrom((com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(PRIMITIVE_PARAM other) {
-        if (other == PRIMITIVE_PARAM.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM other) {
+        if (other == com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM.getDefaultInstance()) return this;
         if (other.hasParamBool()) {
           setParamBool(other.getParamBool());
         }
@@ -2370,11 +2292,11 @@ public final class MS_METHOD_GRPC {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        PRIMITIVE_PARAM parsedMessage = null;
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (PRIMITIVE_PARAM) e.getUnfinishedMessage();
+          parsedMessage = (com.cm4j.grpc.proto.MS_METHOD_GRPC.PRIMITIVE_PARAM) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2582,7 +2504,7 @@ public final class MS_METHOD_GRPC {
       }
 
       // optional string paramString = 5;
-      private Object paramString_ = "";
+      private java.lang.Object paramString_ = "";
       /**
        * <code>optional string paramString = 5;</code>
        *
@@ -2600,15 +2522,15 @@ public final class MS_METHOD_GRPC {
        * 字符串
        * </pre>
        */
-      public String getParamString() {
-        Object ref = paramString_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref)
+      public java.lang.String getParamString() {
+        java.lang.Object ref = paramString_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           paramString_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2620,11 +2542,11 @@ public final class MS_METHOD_GRPC {
        */
       public com.google.protobuf.ByteString
           getParamStringBytes() {
-        Object ref = paramString_;
+        java.lang.Object ref = paramString_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           paramString_ = b;
           return b;
         } else {
@@ -2639,7 +2561,7 @@ public final class MS_METHOD_GRPC {
        * </pre>
        */
       public Builder setParamString(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2713,10 +2635,10 @@ public final class MS_METHOD_GRPC {
   private static com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\023grpc/MsMethod.proto\"U\n\rMS_METHOD_REQ\022\r" +
       "\n\005seqId\030\001 \001(\003\022\021\n\tclassName\030\002 \002(\t\022\022\n\nmeth" +
-      "odName\030\003 \002(\t\022\016\n\006params\030\004 \003(\014\"B\n\016MS_METHO" +
+      "odName\030\003 \002(\t\022\016\n\006params\030\004 \002(\014\"B\n\016MS_METHO" +
       "D_RESP\022\r\n\005seqId\030\001 \001(\003\022\016\n\006reback\030\002 \001(\014\022\021\n" +
       "\terrorCode\030\003 \001(\005\"v\n\017PRIMITIVE_PARAM\022\021\n\tp" +
       "aramBool\030\001 \001(\010\022\023\n\013paramNumber\030\002 \001(\005\022\021\n\tp" +
@@ -2735,19 +2657,19 @@ public final class MS_METHOD_GRPC {
           internal_static_MS_METHOD_REQ_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_MS_METHOD_REQ_descriptor,
-              new String[] { "SeqId", "ClassName", "MethodName", "Params", });
+              new java.lang.String[] { "SeqId", "ClassName", "MethodName", "Params", });
           internal_static_MS_METHOD_RESP_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_MS_METHOD_RESP_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_MS_METHOD_RESP_descriptor,
-              new String[] { "SeqId", "Reback", "ErrorCode", });
+              new java.lang.String[] { "SeqId", "Reback", "ErrorCode", });
           internal_static_PRIMITIVE_PARAM_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_PRIMITIVE_PARAM_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_PRIMITIVE_PARAM_descriptor,
-              new String[] { "ParamBool", "ParamNumber", "ParamLong", "ParamDouble", "ParamString", });
+              new java.lang.String[] { "ParamBool", "ParamNumber", "ParamLong", "ParamDouble", "ParamString", });
           return null;
         }
       };

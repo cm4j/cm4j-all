@@ -30,29 +30,29 @@ public final class MsMethodServiceGrpc {
   public static final String SERVICE_NAME = "MsMethodService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<MS_METHOD_GRPC.MS_METHOD_REQ,
-      MS_METHOD_GRPC.MS_METHOD_RESP> getInvokerMethod;
+  private static volatile io.grpc.MethodDescriptor<com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ,
+      com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP> getInvokerMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "invoker",
-      requestType = MS_METHOD_GRPC.MS_METHOD_REQ.class,
-      responseType = MS_METHOD_GRPC.MS_METHOD_RESP.class,
+      requestType = com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ.class,
+      responseType = com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<MS_METHOD_GRPC.MS_METHOD_REQ,
-      MS_METHOD_GRPC.MS_METHOD_RESP> getInvokerMethod() {
-    io.grpc.MethodDescriptor<MS_METHOD_GRPC.MS_METHOD_REQ, MS_METHOD_GRPC.MS_METHOD_RESP> getInvokerMethod;
+  public static io.grpc.MethodDescriptor<com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ,
+      com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP> getInvokerMethod() {
+    io.grpc.MethodDescriptor<com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ, com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP> getInvokerMethod;
     if ((getInvokerMethod = MsMethodServiceGrpc.getInvokerMethod) == null) {
       synchronized (MsMethodServiceGrpc.class) {
         if ((getInvokerMethod = MsMethodServiceGrpc.getInvokerMethod) == null) {
           MsMethodServiceGrpc.getInvokerMethod = getInvokerMethod =
-              io.grpc.MethodDescriptor.<MS_METHOD_GRPC.MS_METHOD_REQ, MS_METHOD_GRPC.MS_METHOD_RESP>newBuilder()
+              io.grpc.MethodDescriptor.<com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ, com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "invoker"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  MS_METHOD_GRPC.MS_METHOD_REQ.getDefaultInstance()))
+                  com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  MS_METHOD_GRPC.MS_METHOD_RESP.getDefaultInstance()))
+                  com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP.getDefaultInstance()))
               .setSchemaDescriptor(new MsMethodServiceMethodDescriptorSupplier("invoker"))
               .build();
         }
@@ -67,7 +67,7 @@ public final class MsMethodServiceGrpc {
   public static MsMethodServiceStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<MsMethodServiceStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<MsMethodServiceStub>() {
-        @Override
+        @java.lang.Override
         public MsMethodServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new MsMethodServiceStub(channel, callOptions);
         }
@@ -82,7 +82,7 @@ public final class MsMethodServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<MsMethodServiceBlockingStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<MsMethodServiceBlockingStub>() {
-        @Override
+        @java.lang.Override
         public MsMethodServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new MsMethodServiceBlockingStub(channel, callOptions);
         }
@@ -97,7 +97,7 @@ public final class MsMethodServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<MsMethodServiceFutureStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<MsMethodServiceFutureStub>() {
-        @Override
+        @java.lang.Override
         public MsMethodServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new MsMethodServiceFutureStub(channel, callOptions);
         }
@@ -117,19 +117,19 @@ public final class MsMethodServiceGrpc {
      * 调用方法
      * </pre>
      */
-    public void invoker(MS_METHOD_GRPC.MS_METHOD_REQ request,
-                        io.grpc.stub.StreamObserver<MS_METHOD_GRPC.MS_METHOD_RESP> responseObserver) {
+    public void invoker(com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ request,
+        io.grpc.stub.StreamObserver<com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP> responseObserver) {
       asyncUnimplementedUnaryCall(getInvokerMethod(), responseObserver);
     }
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getInvokerMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                MS_METHOD_GRPC.MS_METHOD_REQ,
-                MS_METHOD_GRPC.MS_METHOD_RESP>(
+                com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ,
+                com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP>(
                   this, METHODID_INVOKER)))
           .build();
     }
@@ -146,7 +146,7 @@ public final class MsMethodServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected MsMethodServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MsMethodServiceStub(channel, callOptions);
@@ -157,8 +157,8 @@ public final class MsMethodServiceGrpc {
      * 调用方法
      * </pre>
      */
-    public void invoker(MS_METHOD_GRPC.MS_METHOD_REQ request,
-                        io.grpc.stub.StreamObserver<MS_METHOD_GRPC.MS_METHOD_RESP> responseObserver) {
+    public void invoker(com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ request,
+        io.grpc.stub.StreamObserver<com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getInvokerMethod(), getCallOptions()), request, responseObserver);
     }
@@ -175,7 +175,7 @@ public final class MsMethodServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected MsMethodServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MsMethodServiceBlockingStub(channel, callOptions);
@@ -186,7 +186,7 @@ public final class MsMethodServiceGrpc {
      * 调用方法
      * </pre>
      */
-    public MS_METHOD_GRPC.MS_METHOD_RESP invoker(MS_METHOD_GRPC.MS_METHOD_REQ request) {
+    public com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP invoker(com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ request) {
       return blockingUnaryCall(
           getChannel(), getInvokerMethod(), getCallOptions(), request);
     }
@@ -203,7 +203,7 @@ public final class MsMethodServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected MsMethodServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MsMethodServiceFutureStub(channel, callOptions);
@@ -214,8 +214,8 @@ public final class MsMethodServiceGrpc {
      * 调用方法
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<MS_METHOD_GRPC.MS_METHOD_RESP> invoker(
-        MS_METHOD_GRPC.MS_METHOD_REQ request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP> invoker(
+        com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ request) {
       return futureUnaryCall(
           getChannel().newCall(getInvokerMethod(), getCallOptions()), request);
     }
@@ -236,21 +236,21 @@ public final class MsMethodServiceGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_INVOKER:
-          serviceImpl.invoker((MS_METHOD_GRPC.MS_METHOD_REQ) request,
-              (io.grpc.stub.StreamObserver<MS_METHOD_GRPC.MS_METHOD_RESP>) responseObserver);
+          serviceImpl.invoker((com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_REQ) request,
+              (io.grpc.stub.StreamObserver<com.cm4j.grpc.proto.MS_METHOD_GRPC.MS_METHOD_RESP>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -264,12 +264,12 @@ public final class MsMethodServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     MsMethodServiceBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return MS_METHOD_GRPC.getDescriptor();
+      return com.cm4j.grpc.proto.MS_METHOD_GRPC.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("MsMethodService");
     }
@@ -289,7 +289,7 @@ public final class MsMethodServiceGrpc {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }

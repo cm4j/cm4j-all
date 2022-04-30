@@ -6,10 +6,8 @@ import com.cm4j.grpc.proto.MsMethodServiceGrpc;
 import com.cm4j.grpc.server.GrpcServer;
 import com.cm4j.invoke.IRemotingClass;
 import com.cm4j.invoke.RemotingMethod;
-import com.cm4j.invoke.invoker.RemotingInvokerGenerator;
 import com.cm4j.util.RemotingInvokerUtil;
 import com.google.common.collect.Maps;
-import com.google.protobuf.MessageLite;
 import io.grpc.StatusRuntimeException;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -103,27 +101,16 @@ public class LocalProxyGenerator {
 
             req.setClassName(clazz.getName());
             req.setMethodName(method);
-            for (Object param : params) {
-                MessageLite paramMess = RemotingInvokerUtil.object2MessageLite(param);
-                if (paramMess == null) {
-                    log.error("grpc[{}].[{}] param error...", clazz.getName(), method);
-                    return null;
-                }
-                req.addParams(paramMess.toByteString());
-            }
+            req.setParams(RemotingInvokerUtil.encodeParams(params));
 
             int sid = Integer.parseInt(String.valueOf(params[0]));
             MsMethodServiceGrpc.MsMethodServiceBlockingStub blockingStub = GrpcClient.getBlockingStub0(sid, MsMethodServiceGrpc.class);
             MS_METHOD_GRPC.MS_METHOD_RESP resp = blockingStub.invoker(req.build());
 
-            String methodPositioning = RemotingInvokerUtil.getMethodPositioning(clazz, method);
-            Class<?> returnClassType = RemotingInvokerGenerator.getClassMethodReturnType().get(methodPositioning);
-            if (Void.TYPE.equals(returnClassType)) {
-                return null;
-            }
 
             if (resp.hasReback()) {
-                return RemotingInvokerUtil.messageLite2Object(returnClassType, resp.getReback());
+                Object[] reback = RemotingInvokerUtil.decodeParams(resp.getReback());
+                return reback[0];
             }
         } catch (StatusRuntimeException e) {
             // 远端异常

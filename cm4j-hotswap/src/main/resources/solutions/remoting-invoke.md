@@ -59,7 +59,7 @@ public class TestRpc implements IRemotingClass {
 
 如何在真正业务逻辑执行前加是否为本服的判断？这是典型的代理的使用场景。
 所以我们在服务启动时，进行代码扫描，采用cglib框架对IRemotingClass的子类生成代理类。具体实现代码：RemotingInvokerGenerator#init(String packageScann)
- 
+
 #### 生成代理类示例：
 
 ```java
@@ -112,7 +112,7 @@ class LocalProxyGenerator {
 - 方案1：反射调用，频繁业务不建议
 - 方案2：参考开源的一些实现，在服务启动时，进行代码扫描，采用javaassist框架动态代码生成类和对象，基于判断来进行方法直调。
   相关代码生成类：RemotingInvokerGenerator，具体实现就不细讲了，大家有兴趣可以去看下源码。注意：为了支持子类热更，我们这里调用的是***Registry类，
-有不清楚原理的可以参照：[JAVA热更新2：动态加载子类热更](https://yeas.fun/archives/java-hotswap-compile)
+  有不清楚原理的可以参照：[JAVA热更新2：动态加载子类热更](https://yeas.fun/archives/java-hotswap-compile)
 
 以下是生成的class（服务启动后会dump在项目的invoker-output目录下）:
 
@@ -158,5 +158,9 @@ TestRpcTest：单元测试里启动了2服的服务端，设置当前应用是1�
 - 本服：构建代理类
 - 传输：grpc
 - 远程：通过javaassist动态生成类来调用需要执行的逻辑
+
+## 后续优化
+
+此文中部分实现有点原始，后续已对其中2点进行优化，<font color=red>示例代码也被替换为优化后的方案</font>，具体优化请查看：[像本服一样调用远程代码（优化版）](//yeas.fun/archives/remoting-invoke2)
 
 ## --- END ---

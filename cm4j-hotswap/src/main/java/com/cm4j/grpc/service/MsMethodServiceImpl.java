@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Description:远程方法调用
  *
- * @author zhanghaojie
+ * @author yeas.fun
  * @since 2021/8/27
  */
 public class MsMethodServiceImpl extends MsMethodServiceGrpc.MsMethodServiceImplBase {
@@ -28,10 +28,7 @@ public class MsMethodServiceImpl extends MsMethodServiceGrpc.MsMethodServiceImpl
         try {
             Object invoke = RemotingInvokerUtil.remoteInvoke(className, methodName, request);
             if (invoke != null) {
-                MessageLite reback = RemotingInvokerUtil.object2MessageLite(invoke);
-                if (reback != null) {
-                    resp.setReback(reback.toByteString());
-                }
+                resp.setReback(RemotingInvokerUtil.encodeParams(new Object[]{invoke}));
             }
             responseObserver.onNext(resp.build());
         } catch (StatusRuntimeException e) {
